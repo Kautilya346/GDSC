@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <form action="/add_project" method="POST" enctype="multipart/form-data">
+        <br><br><br><br><br>
+        <div class="maind">
+            <br><br><br><br><br>
+            <div class="boxy">
+                <h2 style="text-align: center;"><b>Add Project </b></h2>
+                <br>
+                <input type="text" class="box" id="pname" name="pname" placeholder="Project Name" required/>
+                    <br> <br>
+                    <input type="text" class="box" id="githublink" name="githublink" placeholder="Git-Hub Link" required/>
+                    <br>
+                    <img src="default-image-icon-missing-picture-page-vector-40546530.jpg" id="prof">
+                    <label for="input_file" id="joker">Upload Thumbnail</label>
+                    <input type="file" id="input_file" style="display: none;" name="thumbnail">
+
+                    <input type="submit" value="Submit" id="submit"/>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        let pp= document.getElementById("prof");
+        let ifd= document.getElementById("input_file");
+
+        ifd.onchange=function(){
+            pp.src=URL.createObjectURL(ifd.files[0]);
+        }
+
+
+    </script>
+    
+</body>
+</html>

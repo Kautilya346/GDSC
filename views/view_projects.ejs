@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 main">
+                
+                <% x.forEach((user)=>{ %>
+                    <div class="kites">
+
+                        <h3 class="tige"><b>Name Of The Project:</b></h3>
+                        <h3 class="tige"> <%-user.prname %></h3>
+                        
+                        <h3 class="tige"><b>GitHub Link:</b></h3>
+                        <h3 class="tige"><a href=" <%-user.githublink %>">Click Here</a></h3>
+                        <br>
+
+                        <img src="../public/my-uploads//<%-user.thumbnail %>" width="200px" class="tigers" >
+
+                        <a href="/delete/<%-user._id %>" class="Lions"><b>Delete</b></a>
+                        <a href="/edit/<%-user._id %>" class="Lion"><b>Edit</b></a>
+                        <br><br>    
+                    </div>
+
+                <% }); %> 
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
