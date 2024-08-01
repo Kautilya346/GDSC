@@ -2,7 +2,7 @@ var express=require("express")
 var bodyParser=require("body-parser")
 const Collection=require("./mongodb")
 
-var morgan = require("morgan")
+//var morgan = require("morgan")
 var cookieParser=require("cookie-parser")
 const router=express.Router();
 const prs=require('./pr')
